@@ -73,7 +73,7 @@ AOHP 在尽量减少不必要明文暴露的同时，保留智能体完成合法
 ## 系统架构
 
 <p align="center">
-  <img src="./pic/overview.png" alt="AOHP 系统架构" width="85%"/>
+  <img src="../pic/overview.png" alt="AOHP 系统架构" width="85%"/>
 </p>
 
 AOHP 中的任务通常经历五个阶段：
@@ -117,7 +117,7 @@ git clone https://github.com/aohp-os/aohp.git
 
 ## 许可证
 
-AOHP 采用 [Apache License, Version 2.0](LICENSE) 发布。
+AOHP 采用 [Apache License, Version 2.0](../LICENSE) 发布。
 
 ---
 
