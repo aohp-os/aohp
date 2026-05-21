@@ -29,6 +29,14 @@ AI agents are becoming active operators of personal computing systems — invoki
 
 **AOHP** addresses this by redesigning Android as an **agent-native operating environment**. Rather than replacing the existing app ecosystem, AOHP keeps Android's hardware support, open-source framework, and app compatibility while adding system mechanisms that make services callable, composable, personalized, efficient, and auditable for OS-level agents.
 
+### Example: one shopping task, two experiences
+
+Consider the intent *"Find me the best running shoes under $80."* On stock Android, the human must hop sequentially across Amazon, Temu, eBay, the browser, and Notes—many GUI taps, copy-paste, and app switches. On AOHP, a **personalized shopping entrance** exposes one task-level interface; the OS agent understands the intent, composes services in **parallel**, and enforces policy before delivering results.
+
+<p align="center">
+  <img src="./pic/demo.png" alt="Stock Android vs AOHP for a shopping task" width="90%"/>
+</p>
+
 ---
 
 ## Key Design Principles
