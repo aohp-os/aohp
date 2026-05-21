@@ -7,11 +7,16 @@
 
 <p align="center">
   <a href="https://github.com/aohp-os/"><img src="https://img.shields.io/badge/Project-AOHP--OS-blue" alt="Project"></a>
-  <a href="#"><img src="https://img.shields.io/badge/License-TBD-lightgrey" alt="License"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License"></a>
   <a href="#"><img src="https://img.shields.io/badge/Platform-Android%20(AOSP)-green" alt="Platform"></a>
   <a href="#"><img src="https://img.shields.io/badge/Paper-Technical%20Report-orange" alt="Paper"></a>
   <a href="https://github.com/aohp-os/"><img src="https://img.shields.io/badge/Institute-AIR%2C%20Tsinghua-purple" alt="Institute"></a>
 </p>
+
+<p align="center">
+  <a href="README.zh-CN.md">中文</a>
+</p>
+
 
 ---
 
@@ -98,38 +103,26 @@ We evaluate AOHP using [OpenClaw](https://github.com/openclaw/openclaw) agents a
 
 ## Getting Started
 
-> Coming soon — AOHP is currently under active development. Stay tuned for build instructions and device images.
+AOHP is under active development. **Source code, build instructions, and device images are not yet public** and will be published in this repo when ready.
+
+You can clone this repository today to read the documentation and follow project updates:
 
 ```bash
-# Clone the repository
 git clone https://github.com/aohp-os/aohp.git
-
-# Build instructions (coming soon)
 ```
+
+Build and flash instructions will be added here once the codebase is released.
 
 ---
 
-## Project Structure
 
-```
-aohp/
-├── frameworks/        # Modified AOSP framework with AOHP security and agent services
-├── packages/          # System apps and agent-oriented UI components
-├── cli/               # AOHP command-line interface for agent interaction
-├── skills/            # Built-in agent skills
-├── android/           # SDK, demo apps, and developer tools
-├── contrib/           # Reference bridges and integration guides
-├── testcases/         # Security and functionality test suites
-└── docs/              # Documentation and design references
-```
+
+## License
+
+AOHP is licensed under the [Apache License, Version 2.0](LICENSE).
 
 ---
 
-## Contributing
-
-We welcome contributions from the community. Please see [CONTRIBUTING.md](doc/CONTRIBUTING.md) for guidelines.
-
----
 
 ## Citation
 
