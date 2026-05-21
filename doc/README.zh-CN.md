@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="../pic/comparison.png" alt="AOHP vs Android" width="85%"/>
+</p>
 
 <h1 align="center">AOHP：Android Open Harness Project</h1>
 
