@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="figures/overview.png" alt="AOHP Architecture Overview" width="90%"/>
-</p>
 
 <h1 align="center">AOHP: Android Open Harness Project</h1>
 
@@ -72,7 +69,7 @@ AOHP minimizes unnecessary plaintext exposure while preserving the agent's abili
 ## Architecture
 
 <p align="center">
-  <img src="pic/overview.png" alt="AOHP System Architecture" width="85%"/>
+  <img src="./pic/overview.png" alt="AOHP System Architecture" width="85%"/>
 </p>
 
 A task in AOHP proceeds through five stages:
@@ -130,7 +127,7 @@ aohp/
 
 ## Contributing
 
-We welcome contributions from the community. Please see [doc/CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+We welcome contributions from the community. Please see [CONTRIBUTING.md](doc/CONTRIBUTING.md) for guidelines.
 
 ---
 
