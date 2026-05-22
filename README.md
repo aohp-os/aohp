@@ -1,4 +1,4 @@
-<h1 align="center">AOHP: An Open Fork of Android for Agent-Native System Redesign</h1>
+<h1 align="center">AOHP: An Agent-Native Open Fork of Android</h1>
 
 <p align="center">
   <strong>Android Open Harness Project</strong>
@@ -143,7 +143,7 @@ AOHP is licensed under the [Apache License, Version 2.0](LICENSE).
 
 ```bibtex
 @techreport{aohp2026,
-  title={AOHP: An Open Fork of Android for Agent-Native System Redesign},
+  title={AOHP: An Agent-Native Open Fork of Android},
   author={TBD},
   institution={Institute for AI Industry Research (AIR), Tsinghua University},
   year={2026}

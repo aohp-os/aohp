@@ -1,4 +1,4 @@
-<h1 align="center">AOHP：面向智能体原生系统重设计的 Android 开放分支</h1>
+<h1 align="center">AOHP：智能体原生的 Android 开放分支</h1>
 
 <p align="center">
   <strong>Android Open Harness Project</strong>
@@ -141,7 +141,7 @@ AOHP 采用 [Apache License, Version 2.0](../LICENSE) 发布。
 
 ```bibtex
 @techreport{aohp2026,
-  title={AOHP: An Open Fork of Android for Agent-Native System Redesign},
+  title={AOHP: An Agent-Native Open Fork of Android},
   author={TBD},
   institution={Institute for AI Industry Research (AIR), Tsinghua University},
   year={2026}
