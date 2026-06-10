@@ -118,7 +118,9 @@ AOHP 中的任务通常经历五个阶段：
 
 ---
 
-## 🎬 真实系统演示 {#real-world-demos}
+<a id="real-world-demos"></a>
+
+## 🎬 真实系统演示
 
 AOHP 不仅是设计方案——它以可运行的 AOSP 分支形式落地，内置 **AOHPAgentDriver**、**OpenClaw**、**skills** 以及**用户定义应用（UDA）**生成器。以下为真实系统录屏。
 
@@ -133,9 +135,9 @@ AOHP 不仅是设计方案——它以可运行的 AOSP 分支形式落地，内
 <td align="center" width="33%"><strong>Python Learning Assistant</strong><br><sub>少儿编程学习助手</sub></td>
 </tr>
 <tr>
-<td align="center"><video src="../demos/uda/health_hub_demo.mp4" controls width="260"></video></td>
-<td align="center"><video src="../demos/uda/gift_picker_demo.mp4" controls width="260"></video></td>
-<td align="center"><video src="../demos/uda/python_learning_assistant_demo.mp4" controls width="260"></video></td>
+<td align="center"><a href="../demos/uda/health_hub_demo.mp4"><img src="../demos/uda/health_hub_demo.gif" alt="Health Hub 演示" width="260"/></a></td>
+<td align="center"><a href="../demos/uda/gift_picker_demo.mp4"><img src="../demos/uda/gift_picker_demo.gif" alt="Gift Picker 演示" width="260"/></a></td>
+<td align="center"><a href="../demos/uda/python_learning_assistant_demo.mp4"><img src="../demos/uda/python_learning_assistant_demo.gif" alt="Python Learning Assistant 演示" width="260"/></a></td>
 </tr>
 <tr>
 <td align="center"><sub>Aggregate fitness and sleep records from Huawei Health, and weight data from Mi Fitness, to generate a unified health management app. The app should be in English and support both portrait and landscape layouts.</sub></td>
@@ -155,15 +157,17 @@ AOHP 不仅是设计方案——它以可运行的 AOSP 分支形式落地，内
 <td align="center" width="33%"><strong>事件捕获</strong></td>
 </tr>
 <tr>
-<td align="center"><video src="../demos/agent/gallery_brightness.mp4" controls width="260"></video></td>
-<td align="center"><video src="../demos/agent/cloud_file_markor.mp4" controls width="260"></video></td>
-<td align="center"><video src="../demos/agent/taskdriver_calendar.mp4" controls width="260"></video></td>
+<td align="center"><a href="../demos/agent/gallery_brightness.mp4"><img src="../demos/agent/gallery_brightness.gif" alt="UI 微操作演示" width="260"/></a></td>
+<td align="center"><a href="../demos/agent/cloud_file_markor.mp4"><img src="../demos/agent/cloud_file_markor.gif" alt="文件处理演示" width="260"/></a></td>
+<td align="center"><a href="../demos/agent/taskdriver_calendar.mp4"><img src="../demos/agent/taskdriver_calendar.gif" alt="事件捕获演示" width="260"/></a></td>
 </tr>
 </table>
 
 ---
 
-## 评测亮点 {#evaluation-highlights}
+<a id="evaluation-highlights"></a>
+
+## 评测亮点
 
 我们使用 [OpenClaw](https://github.com/openclaw/openclaw) 智能体，在 10 项代表性任务上对比 AOHP 与原生 Android：
 
