@@ -1,20 +1,36 @@
-<h1 align="center">AOHP：智能体原生的 Android 开放分支</h1>
+<h1 align="center">AOHP：Android Open Harness Project</h1>
 
 <p align="center">
-  <strong>Android Open Harness Project</strong>
+  <strong>面向个性化、高效与安全交互的开源 OS 级智能体基座</strong>
 </p>
 
 <p align="center">
-  <a href="https://github.com/aohp-os/"><img src="https://img.shields.io/badge/Project-AOHP--OS-blue" alt="Project"></a>
-  <a href="../LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Platform-Android%20(AOSP)-green" alt="Platform"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Paper-Technical%20Report-orange" alt="Paper"></a>
+  <strong>当今操作系统服务于人类 👨‍💻。明日的用户将是智能体 🤖。</strong>
+</p>
+
+**🎬 [观看演示](#real-world-demos)**：仅需一句自然语言意图即可生成用户定义应用（UDA）；亦可观看 OpenClaw 智能体通过 AOHP 的 CLI、结构化 UI 与虚拟显示服务完成真实移动任务——附带实时执行悬浮窗录屏。
+
+<p align="center">
+  <a href="https://github.com/aohp-os/"><img src="https://img.shields.io/badge/Organization-AOHP--OS-blue?style=for-the-badge" alt="Organization"></a>
+  <a href="#real-world-demos"><img src="https://img.shields.io/badge/Demos-6_Live_Recordings-green?style=for-the-badge" alt="Demos"></a>
+  <a href="#evaluation-highlights"><img src="https://img.shields.io/badge/Benchmark-90%25_Task_Success-brightgreen?style=for-the-badge" alt="Benchmark"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Paper-Technical%20Report-orange?style=for-the-badge" alt="Paper"></a>
+  <a href="../LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-yellow?style=for-the-badge" alt="License"></a>
+</p>
+
+<p align="center">
+  <a href="https://source.android.com/"><img src="https://img.shields.io/badge/Platform-Android%20(AOSP)-green" alt="Platform"></a>
+  <a href="https://github.com/openclaw/openclaw"><img src="https://img.shields.io/badge/Agent-OpenClaw-purple" alt="Agent"></a>
 </p>
 
 <p align="center">
   <a href="../README.md">English</a> ·
   <a href="DEVELOPMENT.zh-CN.md">开发指南</a> ·
   <a href="DEVELOPMENT.md">Development Guide</a>
+</p>
+
+<p align="center">
+  <img src="../pic/cartoon_comic.png" alt="AOHP 漫画概览：从人类操作的 Android 到智能体原生操作系统" width="90%"/>
 </p>
 
 ---
@@ -32,7 +48,6 @@ AI 智能体正在成为个人计算系统中的主动操作者：调用工具�
 <p align="center">
   <img src="../pic/comparison.png" alt="传统 Android 与 AOHP 架构对比" width="90%"/>
 </p>
-
 
 ### 示例：同一购物任务，两种体验
 
@@ -73,7 +88,7 @@ AOHP 将智能体执行与硬件约束解耦，并缩小系统状态与模型理
 - **并行后台交互** — 轻量虚拟显示，支持多应用并发执行
 - **智能体感知 UI 增强** — 结构化 UI 表示，降低冗余、丰富语义
 - **原生沙箱运行时** — OS 管理的代码执行、数据处理与长驻服务载体
-- **统一文件管理** — 在 OS 边界将文件作为一等任务对象处理
+- **统一文件快捷方式** — 在 OS 边界将文件作为一等任务对象处理
 - **事件流抽象** — 对瞬时通知与传感器数据的统一订阅接口
 
 ### 3. 安全信息流
@@ -103,17 +118,62 @@ AOHP 中的任务通常经历五个阶段：
 
 ---
 
-## 评测亮点
+## 🎬 真实系统演示 {#real-world-demos}
 
-我们使用 [OpenClaw](https://github.com/openclaw/openclaw) 智能体，在 10 项代表性移动任务上对比 AOHP 与原生 Android：
+AOHP 不仅是设计方案——它以可运行的 AOSP 分支形式落地，内置 **AOHPAgentDriver**、**OpenClaw**、**skills** 以及**用户定义应用（UDA）**生成器。以下为真实系统录屏。
+
+### 用户定义应用 — 从意图到可安装应用
+
+向 AOHP 提供自然语言意图，即可生成完整应用——PRD、设计规格、前端与后端——并可直接安装到设备上。
+
+<table align="center">
+<tr>
+<td align="center" width="33%"><strong>Health Hub</strong><br><sub>统一健身与睡眠看板</sub></td>
+<td align="center" width="33%"><strong>Gift Picker</strong><br><sub>520 奢侈品礼物推荐</sub></td>
+<td align="center" width="33%"><strong>Python Learning Assistant</strong><br><sub>少儿编程学习助手</sub></td>
+</tr>
+<tr>
+<td align="center"><video src="../demos/uda/health_hub_demo.mp4" controls width="260"></video></td>
+<td align="center"><video src="../demos/uda/gift_picker_demo.mp4" controls width="260"></video></td>
+<td align="center"><video src="../demos/uda/python_learning_assistant_demo.mp4" controls width="260"></video></td>
+</tr>
+<tr>
+<td align="center"><sub>Aggregate fitness and sleep records from Huawei Health, and weight data from Mi Fitness, to generate a unified health management app. The app should be in English and support both portrait and landscape layouts.</sub></td>
+<td align="center"><sub>A gift selection app for romantic occasions like 520, helping users choose luxury items (Chanel/Gucci perfumes, Dior bags, Tiffany/VCA necklaces) for their girlfriends, featuring both portrait and landscape responsive layouts.</sub></td>
+<td align="center"><sub>My son recently started primary school, and I want him to learn programming (Python). Please help me generate a Python learning App, including knowledge point explanations, exercises, interactive practice, and learning progress. Please use English for the app generation, and it can include both landscape and portrait versions.</sub></td>
+</tr>
+</table>
+
+### 智能体执行 — AOHP 上的 OpenClaw
+
+基准测试通过 **AOHPAgentDriver** 调起 **OpenClaw**，将 AOHP 服务封装为 **skills**。以下录屏展示智能体在真实 AOHP 设备上的执行过程。
+
+<table align="center">
+<tr>
+<td align="center" width="33%"><strong>UI 微操作</strong></td>
+<td align="center" width="33%"><strong>文件处理</strong></td>
+<td align="center" width="33%"><strong>事件捕获</strong></td>
+</tr>
+<tr>
+<td align="center"><video src="../demos/agent/gallery_brightness.mp4" controls width="260"></video></td>
+<td align="center"><video src="../demos/agent/cloud_file_markor.mp4" controls width="260"></video></td>
+<td align="center"><video src="../demos/agent/taskdriver_calendar.mp4" controls width="260"></video></td>
+</tr>
+</table>
+
+---
+
+## 评测亮点 {#evaluation-highlights}
+
+我们使用 [OpenClaw](https://github.com/openclaw/openclaw) 智能体，在 10 项代表性任务上对比 AOHP 与原生 Android：
 
 | 指标 | 提升 |
 |------|------|
-| 任务完成率 | **90.0%**（原生 Android 为 43.3%） |
-| 工具调用次数 | **−65.6%** |
-| 耗时 | **−72.2%** |
-| Token 消耗 | **−73.9%** |
-| LLM 请求次数 | **−68.5%** |
+| 任务完成率 | **↑46.7%** |
+| 工具调用次数 | **↓65.6%** |
+| 耗时 | **↓72.2%** |
+| Token 消耗 | **↓73.9%** |
+| LLM 请求次数 | **↓68.5%** |
 
 ---
 
@@ -161,13 +221,11 @@ git clone https://github.com/aohp-os/aohp.git
 
 ---
 
-
 ## 许可证
 
 AOHP 采用 [Apache License, Version 2.0](../LICENSE) 发布。
 
 ---
-
 
 ## 引用
 
@@ -181,7 +239,6 @@ AOHP 采用 [Apache License, Version 2.0](../LICENSE) 发布。
 ```
 
 ---
-
 
 <p align="center">
   <i>操作系统不再只是人类操作应用的底座——它成为智能体感知、规划、行动并落实用户意图的环境。</i>
