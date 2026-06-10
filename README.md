@@ -12,7 +12,9 @@
 </p>
 
 <p align="center">
-  <a href="doc/README.zh-CN.md">中文文档</a>
+  <a href="doc/README.zh-CN.md">中文文档</a> ·
+  <a href="doc/DEVELOPMENT.md">Development Guide</a> ·
+  <a href="doc/DEVELOPMENT.zh-CN.md">开发指南</a>
 </p>
 
 
@@ -118,15 +120,45 @@ We evaluate AOHP with [OpenClaw](https://github.com/openclaw/openclaw) agents ag
 
 ## Getting Started
 
-AOHP is under active development. **Source code, build instructions, and device images are not yet public** and will be published in this repository when ready.
+AOHP is built on AOSP and developed through the unified **[aohp](https://github.com/aohp-os/aohp)** framework. This repository hosts project documentation; source trees live in the `aohp-os` GitHub organization and are pulled in via [local_manifests](https://github.com/aohp-os/local_manifests).
 
-You can clone this repository today to read the documentation and follow project updates:
+### Quick start
+
+```bash
+# 1. Clone the dev framework
+git clone git@github.com:aohp-os/aohp.git
+cd aohp
+
+# 2. Initialize AOSP + AOHP manifests (see guide for mirror/proxy options)
+cd AOSP && repo init -b android-latest-release
+cd .repo && git clone git@github.com:aohp-os/local_manifests.git && cd ..
+repo sync -j4
+
+# 3. Build
+bash scripts/build.sh
+
+# 4. Launch Cuttlefish (after envsetup + lunch)
+source AOSP/build/envsetup.sh
+lunch aosp_cf_x86_64_phone_aohp-trunk_staging-userdebug
+sudo -E bash -c 'ulimit -n 65536; '"$ANDROID_HOST_OUT"'/bin/launch_cvd --report_anonymous_usage_stats=n' &
+```
+
+Open the emulator at **https://localhost:8443/** (instance 1).
+
+### Full development guide
+
+Setup, networking, multi-instance Cuttlefish, sandbox options, and contribution workflow are documented in:
+
+| Document | Description |
+|----------|-------------|
+| **[Development Guide](doc/DEVELOPMENT.md)** | Complete English tutorial |
+| **[开发指南](doc/DEVELOPMENT.zh-CN.md)** | 完整中文开发教程 |
+
+You can also clone this repo for project overview and updates:
 
 ```bash
 git clone https://github.com/aohp-os/aohp.git
 ```
-
-Build and flashing instructions will be added here once the codebase is released.
 
 ---
 

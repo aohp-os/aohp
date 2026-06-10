@@ -12,7 +12,9 @@
 </p>
 
 <p align="center">
-  <a href="../README.md">English</a>
+  <a href="../README.md">English</a> ·
+  <a href="DEVELOPMENT.zh-CN.md">开发指南</a> ·
+  <a href="DEVELOPMENT.md">Development Guide</a>
 </p>
 
 ---
@@ -117,15 +119,45 @@ AOHP 中的任务通常经历五个阶段：
 
 ## 快速开始
 
-AOHP 正在积极开发中。**源码、构建说明与设备镜像尚未公开**，将在准备就绪后发布到本仓库。
+AOHP 基于 AOSP 构建，通过统一的 **[aohp](https://github.com/aohp-os/aohp)** 开发框架进行开发与编译。本仓库为项目文档主页；源码分布在 `aohp-os` GitHub 组织下，经 [local_manifests](https://github.com/aohp-os/local_manifests) 注入到 AOSP 树中。
 
-你仍可克隆本仓库以阅读文档并关注项目进展：
+### 简要流程
+
+```bash
+# 1. 克隆开发框架
+git clone git@github.com:aohp-os/aohp.git
+cd aohp
+
+# 2. 初始化 AOSP + AOHP manifest（镜像/代理选项见开发指南）
+cd AOSP && repo init -b android-latest-release
+cd .repo && git clone git@github.com:aohp-os/local_manifests.git && cd ..
+repo sync -j4
+
+# 3. 编译
+bash scripts/build.sh
+
+# 4. 启动 Cuttlefish（需先 envsetup + lunch）
+source AOSP/build/envsetup.sh
+lunch aosp_cf_x86_64_phone_aohp-trunk_staging-userdebug
+sudo -E bash -c 'ulimit -n 65536; '"$ANDROID_HOST_OUT"'/bin/launch_cvd --report_anonymous_usage_stats=n' &
+```
+
+在浏览器打开 **https://localhost:8443/** 访问虚拟机（实例号 1）。
+
+### 完整开发教程
+
+环境搭建、网络配置、多实例 Cuttlefish、沙盒模式与代码提交流程详见：
+
+| 文档 | 说明 |
+|------|------|
+| **[开发指南](DEVELOPMENT.zh-CN.md)** | 完整中文开发教程 |
+| **[Development Guide](DEVELOPMENT.md)** | Complete English tutorial |
+
+也可克隆本仓库以阅读项目介绍并关注进展：
 
 ```bash
 git clone https://github.com/aohp-os/aohp.git
 ```
-
-源码开放后，构建与刷机说明将补充在本节。
 
 ---
 
