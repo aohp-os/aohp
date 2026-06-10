@@ -29,7 +29,7 @@
   <a href="doc/DEVELOPMENT.zh-CN.md">开发指南</a>
 </p>
 <p align="center">
-  <img src="./pic/cartoon_comic.png" alt="AOHP cartoon overview: from human-operated Android to agent-native OS" width="90%"/>
+  <img src="./pic/cartoon_comic.png" alt="AOHP cartoon overview: from human-operated Android to agent-native OS" width="95%"/>
 </p>
 
 
@@ -73,7 +73,7 @@ Consider the intent *"Find me the best running shoes under $80."* On stock Andro
 
 ## Three Core Capabilities
 
-### 1. Personalized User Interaction
+### 1. Personalized Service Composition
 
 AOHP enables the OS to generate and operate **personalized service entrances** for each user. Instead of manually switching among multiple apps, users interact with task-level interfaces that aggregate capabilities across apps and services.
 
@@ -135,9 +135,9 @@ Give AOHP a natural-language intent; it produces a complete app — PRD, design 
 <td align="center" width="33%"><strong>Python Learning Assistant</strong><br><sub>Kid-Friendly Programming Tutor</sub></td>
 </tr>
 <tr>
-<td align="center"><a href="./demos/uda/health_hub_demo.mp4"><img src="./demos/uda/health_hub_demo.gif" alt="Health Hub demo" width="260"/></a></td>
-<td align="center"><a href="./demos/uda/gift_picker_demo.mp4"><img src="./demos/uda/gift_picker_demo.gif" alt="Gift Picker demo" width="260"/></a></td>
-<td align="center"><a href="./demos/uda/python_learning_assistant_demo.mp4"><img src="./demos/uda/python_learning_assistant_demo.gif" alt="Python Learning Assistant demo" width="260"/></a></td>
+<td align="center"><a href="./demos/uda/health_hub_demo.mp4"><img src="./demos/uda/health_hub_demo.gif" alt="Health Hub demo" width="250"/></a></td>
+<td align="center"><a href="./demos/uda/gift_picker_demo.mp4"><img src="./demos/uda/gift_picker_demo.gif" alt="Gift Picker demo" width="250"/></a></td>
+<td align="center"><a href="./demos/uda/python_learning_assistant_demo.mp4"><img src="./demos/uda/python_learning_assistant_demo.gif" alt="Python Learning Assistant demo" width="250"/></a></td>
 </tr>
 <tr>
 <td align="center"><sub>Aggregate fitness and sleep records from Huawei Health, and weight data from Mi Fitness, to generate a unified health management app. The app should be in English and support both portrait and landscape layouts.</sub></td>
@@ -157,9 +157,9 @@ Benchmark runs invoke **OpenClaw** through **AOHPAgentDriver**, exposing AOHP se
 <td align="center" width="33%"><strong>Event Capture</strong></td>
 </tr>
 <tr>
-<td align="center"><a href="./demos/agent/gallery_brightness.mp4"><img src="./demos/agent/gallery_brightness.gif" alt="Gallery brightness demo" width="260"/></a></td>
-<td align="center"><a href="./demos/agent/cloud_file_markor.mp4"><img src="./demos/agent/cloud_file_markor.gif" alt="Cloud file Markor demo" width="260"/></a></td>
-<td align="center"><a href="./demos/agent/taskdriver_calendar.mp4"><img src="./demos/agent/taskdriver_calendar.gif" alt="TaskDriver calendar demo" width="260"/></a></td>
+<td align="center"><a href="./demos/agent/gallery_brightness.mp4"><img src="./demos/agent/gallery_brightness.gif" alt="Gallery brightness demo" width="250"/></a></td>
+<td align="center"><a href="./demos/agent/cloud_file_markor.mp4"><img src="./demos/agent/cloud_file_markor.gif" alt="Cloud file Markor demo" width="250"/></a></td>
+<td align="center"><a href="./demos/agent/taskdriver_calendar.mp4"><img src="./demos/agent/taskdriver_calendar.gif" alt="TaskDriver calendar demo" width="250"/></a></td>
 </tr>
 </table>
 
