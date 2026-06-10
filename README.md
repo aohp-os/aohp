@@ -46,7 +46,7 @@ AI agents are becoming active operators of personal computing systems: invoking 
 Stock Android keeps the human at the center: manual navigation across **isolated app silos**, sequential interaction, and a human-oriented OS substrate. AOHP introduces **user-defined task apps**, an **OS agent** that understands, plans, orchestrates, executes, and monitors tasks, multi-interface invocation (API, CLI, structured UI, and rendered GUI), and **cross-app service composition**. The result is a shift from an app-first model to an agent-native, service-oriented system.
 
 <p align="center">
-  <img src="./pic/comparison.png" alt="Traditional Android vs AOHP architecture" width="90%"/>
+  <img src="./pic/comparison.png" alt="Traditional Android vs AOHP architecture" width="95%"/>
 </p>
 
 ### Example: one shopping task, two experiences
@@ -54,7 +54,7 @@ Stock Android keeps the human at the center: manual navigation across **isolated
 Consider the intent *"Find me the best running shoes under $80."* On stock Android, the user must move sequentially across Amazon, Temu, eBay, the browser, and Notes, performing repeated GUI operations, copy-paste steps, and app switches. On AOHP, a **personalized shopping entrance** exposes a single task-level interface: the OS agent understands the intent, composes services in **parallel**, applies policy checks, and returns the result.
 
 <p align="center">
-  <img src="./pic/demo.png" alt="Stock Android vs AOHP for a shopping task" width="90%"/>
+  <img src="./pic/demo.png" alt="Stock Android vs AOHP for a shopping task" width="95%"/>
 </p>
 
 ---
@@ -105,7 +105,7 @@ AOHP reduces unnecessary plaintext exposure while preserving the agent's ability
 ## Architecture
 
 <p align="center">
-  <img src="./pic/overview.png" alt="AOHP System Architecture" width="85%"/>
+  <img src="./pic/overview.png" alt="AOHP System Architecture" width="95%"/>
 </p>
 
 A task in AOHP proceeds through five stages:
