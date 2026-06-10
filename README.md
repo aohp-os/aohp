@@ -8,7 +8,7 @@
   <strong>Today's OS Serves Humans 👨‍💻. Tomorrow's Tenants will be Agents 🤖.</strong>
 </p>
 
-**🎬 [See Demos](#real-world-demos)**: Watch User-Defined Apps generated from a single intent, and OpenClaw agents completing real mobile tasks through AOHP's CLI, structured UI, and virtual-display services — with live execution overlays.
+**🎬 [See Demos](#real-world-demos)**: Watch User-Defined Apps generated from a single intent, and agents completing real mobile tasks through AOHP's capabilities.
 
 <p align="center">
   <a href="https://github.com/aohp-os/"><img src="https://img.shields.io/badge/Organization-AOHP--OS-blue?style=for-the-badge" alt="Organization"></a>

@@ -8,7 +8,7 @@
   <strong>当今操作系统服务于人类 👨‍💻。明日的用户将是智能体 🤖。</strong>
 </p>
 
-**🎬 [观看演示](#real-world-demos)**：仅需一句自然语言意图即可生成用户定义应用（UDA）；亦可观看 OpenClaw 智能体通过 AOHP 的 CLI、结构化 UI 与虚拟显示服务完成真实移动任务——附带实时执行悬浮窗录屏。
+**🎬 [观看演示](#real-world-demos)**：仅需一句自然语言意图即可生成用户定义应用（UDA）；亦可观看 OpenClaw 智能体通过 AOHP 的提供的服务来完成任务。
 
 <p align="center">
   <a href="https://github.com/aohp-os/"><img src="https://img.shields.io/badge/Organization-AOHP--OS-blue?style=for-the-badge" alt="Organization"></a>
