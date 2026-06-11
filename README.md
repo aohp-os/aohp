@@ -32,7 +32,6 @@
   <img src="./pic/cartoon_comic.png" alt="AOHP cartoon overview: from human-operated Android to agent-native OS" width="95%"/>
 </p>
 
-
 ---
 
 ## Why AOHP?
@@ -56,6 +55,13 @@ Consider the intent *"Find me the best running shoes under $80."* On stock Andro
 <p align="center">
   <img src="./pic/demo.png" alt="Stock Android vs AOHP for a shopping task" width="95%"/>
 </p>
+
+> [!IMPORTANT]
+> **Research preview.** AOHP is an early-stage research prototype. The technical report presents the system insight and long-term vision behind the project: building an agent-native Android harness for personalized service composition, efficient agent interfaces, and secure information flow.
+>
+> This repository is the initial open-source implementation of that vision. It is intended for research, experimentation, and community feedback, not for production deployments or security-critical workloads. The current code has not yet undergone large-scale compatibility testing, production hardening, independent security audits, or peer review. We do not recommend using this version with real sensitive data, production tasks, or security-critical workloads.
+>
+> We will continue to implement the mechanisms described in the report, improve reliability, compatibility, and security coverage, and add new features as AOHP evolves. Feedback, issues, and contributions from researchers, developers, and the open-source community are welcome.
 
 ---
 
