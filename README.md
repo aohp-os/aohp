@@ -1,26 +1,15 @@
 <h1 align="center">AOHP: Android Open Harness Project</h1>
 
 <p align="center">
-  <strong>An Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction</strong>
+  <strong>Let the OS adapt to its user via agentic AI.</strong>
 </p>
 
-<p align="center">
-  <strong>Today's OS Serves Humans 👨‍💻. Tomorrow's Tenants will be Agents 🤖.</strong>
-</p>
-
-**🎬 [See Demos](#real-world-demos)**: Watch User-Defined Apps generated from a single intent, and agents completing real mobile tasks through AOHP's capabilities.
 
 <p align="center">
-  <a href="https://github.com/aohp-os/"><img src="https://img.shields.io/badge/Organization-AOHP--OS-blue?style=for-the-badge" alt="Organization"></a>
-  <a href="#real-world-demos"><img src="https://img.shields.io/badge/Demos-6_Live_Recordings-green?style=for-the-badge" alt="Demos"></a>
-  <a href="#evaluation-highlights"><img src="https://img.shields.io/badge/Benchmark-90%25_Task_Success-brightgreen?style=for-the-badge" alt="Benchmark"></a>
+  <a href="#real-world-demos"><img src="https://img.shields.io/badge/Demos-Live_Recordings-green?style=for-the-badge" alt="Demos"></a>
+  <a href="#evaluation-highlights"><img src="https://img.shields.io/badge/Benchmark-75.56%25_Completion-brightgreen?style=for-the-badge" alt="Benchmark"></a>
   <a href="#"><img src="https://img.shields.io/badge/Paper-Technical%20Report-orange?style=for-the-badge" alt="Paper"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-yellow?style=for-the-badge" alt="License"></a>
-</p>
-
-<p align="center">
-  <a href="https://source.android.com/"><img src="https://img.shields.io/badge/Platform-Android%20(AOSP)-green" alt="Platform"></a>
-  <a href="https://github.com/openclaw/openclaw"><img src="https://img.shields.io/badge/Agent-OpenClaw-purple" alt="Agent"></a>
 </p>
 
 <p align="center">
@@ -28,111 +17,66 @@
   <a href="doc/DEVELOPMENT.md">Development Guide</a> ·
   <a href="doc/DEVELOPMENT.zh-CN.md">开发指南</a>
 </p>
-<p align="center">
-  <img src="./pic/cartoon_comic.png" alt="AOHP cartoon overview: from human-operated Android to agent-native OS" width="95%"/>
-</p>
+
+**🎬 [See Demos](#real-world-demos)**: Watch AOHP generate personalized user-defined apps and complete cross-app tasks.
 
 ---
 
 ## Why AOHP?
 
-AI agents are becoming active operators of personal computing systems: invoking tools, manipulating applications, and completing multi-step tasks on behalf of users. Yet existing operating systems still assume that **humans** are the primary users, creating fundamental mismatches in efficiency, safety, and accountability when agents become long-running system tenants.
+Traditional OS puts apps at the center. Users navigate **developer-defined app interfaces** to do everything, which may be tedious and distracting.
 
-**AOHP** addresses this by redesigning Android as an **agent-native operating environment**. Rather than replacing the existing app ecosystem, AOHP preserves Android's hardware support, open-source framework, and application compatibility while adding system mechanisms that make services callable, composable, personalized, efficient, and auditable for OS-level agents.
+AOHP shifts the OS toward deeper personalization.
+It introduces **user-defined apps**, which are generated based on the user's actual needs and are backed by AI agents under the hood.
+The agents use system APIs, CLIs and GUI-based apps in the background to compose actual services.
 
-### Traditional Android vs. AOHP
-
-Stock Android keeps the human at the center: manual navigation across **isolated app silos**, sequential interaction, and a human-oriented OS substrate. AOHP introduces **user-defined task apps**, an **OS agent** that understands, plans, orchestrates, executes, and monitors tasks, multi-interface invocation (API, CLI, structured UI, and rendered GUI), and **cross-app service composition**. The result is a shift from an app-first model to an agent-native, service-oriented system.
+To make such experience **feasible, efficient and secure**. Many components in the system and framework layers have to be redesigned, but not all. That's why we introduce AOHP, an OS-level agent harness to enable personalized, efficient and secure interaction.
 
 <p align="center">
   <img src="./pic/comparison.png" alt="Traditional Android vs AOHP architecture" width="95%"/>
 </p>
 
-### Example: one shopping task, two experiences
-
-Consider the intent *"Find me the best running shoes under $80."* On stock Android, the user must move sequentially across Amazon, Temu, eBay, the browser, and Notes, performing repeated GUI operations, copy-paste steps, and app switches. On AOHP, a **personalized shopping entrance** exposes a single task-level interface: the OS agent understands the intent, composes services in **parallel**, applies policy checks, and returns the result.
-
-<p align="center">
-  <img src="./pic/demo.png" alt="Stock Android vs AOHP for a shopping task" width="95%"/>
-</p>
 
 > [!IMPORTANT]
-> **Research preview.** AOHP is an early-stage research prototype. The technical report presents the system insight and long-term vision behind the project: building an agent-native Android harness for personalized service composition, efficient agent interfaces, and secure information flow.
+> **AOHP is an early-stage research prototype**.
+> It is not ready for production deployments or security-critical workloads.
 >
-> This repository is the initial open-source implementation of that vision. It is intended for research, experimentation, and community feedback, not for production deployments or security-critical workloads. The current code has not yet undergone large-scale compatibility testing, production hardening, independent security audits, or peer review. We do not recommend using this version with real sensitive data, production tasks, or security-critical workloads.
->
-> We will continue to implement the mechanisms described in the report, improve reliability, compatibility, and security coverage, and add new features as AOHP evolves. Feedback, issues, and contributions from researchers, developers, and the open-source community are welcome.
+> We will keep improving the reliability, compatibility, and security coverage.
+> Feedback and contributions are welcome.
 
 ---
 
-## Key Design Principles
+## Design
 
-| Dimension               | Stock Android                                                 | AOHP                                                                               |
-| ----------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| **Primary User**        | Human operators with a single visual attention stream         | AI agents as first-class system tenants alongside humans                           |
-| **Interaction Surface** | Fixed, app-defined GUIs rendered for human perception         | Personalized service entrances; APIs, CLIs, and structured UIs for agent operation |
-| **Execution Model**     | Single-tenant foreground execution bound to physical displays | Parallel background interaction decoupled from the screen                          |
-| **System Memory**       | Fragmented and locked inside individual applications          | OS-managed cross-app memory for task personalization                               |
-| **Security & Privacy**  | Coarse-grained app permissions; opaque data flows             | Fine-grained data-flow taint tracking and sandboxed sensitive values               |
-
----
-
-## Three Core Capabilities
-
-### 1. Personalized Service Composition
-
-AOHP enables the OS to generate and operate **personalized service entrances** for each user. Instead of manually switching among multiple apps, users interact with task-level interfaces that aggregate capabilities across apps and services.
-
-- **Generated Service Entrances** — Task-oriented interfaces backed by OS-managed service composition
-- **Capability Discovery** — Cross-app service composition through API, CLI, and GUI channels
-- **Cross-Service Personalization** — OS-level memory that survives app boundaries
-
-### 2. Efficient Agent Interfaces
-
-AOHP decouples agent execution from hardware constraints and narrows the semantic gap between system state and model understanding.
-
-- **Parallel Background Interaction** — Lightweight virtual displays for concurrent multi-app execution
-- **Agent-Aware UI Enhancement** — Structured UI representations with reduced redundancy and richer semantics
-- **Native Sandbox Runtime** — OS-managed execution substrate for code, data processing, and long-running services
-- **Unified File Shortcut** — Files treated as first-class task objects at the OS boundary
-- **Event Stream Abstraction** — Unified subscription interface for transient notifications and sensor data
-
-### 3. Secure Information Flow
-
-AOHP reduces unnecessary plaintext exposure while preserving the agent's ability to complete legitimate tasks.
-
-- **Policy Enforcement** — Runtime data-flow-based policies with fine-grained semantic context
-- **Sensitive Source Sanitization** — Default protection via typed placeholders (e.g., `<payment-card: uuid>`)
-- **Trusted Vault & Execution** — Sensitive operations mediated by a trusted executor without exposing plaintext to the agent
-- **Data-Flow Taint Tracking** — End-to-end taint propagation with enforcement at system boundaries
-
----
-
-## Architecture
+AOHP features a set of efficient agent interfaces and a secure information flow tracking mechanism, which together foster the core capabilities to enable personalized service composition. The system architecture:
 
 <p align="center">
   <img src="./pic/overview.png" alt="AOHP System Architecture" width="95%"/>
 </p>
 
-A task in AOHP proceeds through five stages:
+A comparison between AOHP and stock Android:
 
-1. **Intent Expression** — The user expresses intent through a generated entrance, existing app, or system command
-2. **Capability Resolution** — The OS agent resolves intent into service capabilities using descriptors and system memory
-3. **Execution Path Selection** — API/CLI invocation, structured UI operation, or rendered GUI fallback
-4. **Policy Mediation** — All sensitive inputs and state-changing actions pass through the policy and trace layer
-5. **Memory & Audit** — Task traces and outcomes are stored as system-level memory for personalization and auditing
+| Dimension               | Stock Android                                                 | AOHP                                                          |
+| ----------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| **Interaction Model**   | Users operate app-defined workflows directly                  | Agents act as first-class OS actors under user intent         |
+| **Interaction Surface** | Fixed app GUIs defined by developers                          | Personalized service entrances mediated by agents             |
+| **Process Execution**   | Single-tenant foreground execution bound to physical displays | Parallel background interaction decoupled from the screen     |
+| **System Memory**       | Fragmented and locked inside individual applications          | OS-managed cross-app memory for task personalization          |
+| **Security & Privacy**  | Coarse-grained app permissions and opaque data flows          | Fine-grained data-flow tracking and sandboxed sensitive values|
+
 
 ---
 
 <a id="real-world-demos"></a>
 
-## 🎬 Real-World Demos
+## 🎬 Demos
 
-AOHP is not only a design — it ships as a runnable AOSP fork with **AOHPAgentDriver**, built-in **OpenClaw**, **skills**, and a **User-Defined App (UDA)** generator. Below are screen recordings from the real system.
+AOHP ships as a runnable AOSP fork.
+The recordings below come from the compiled system image.
 
-### User-Defined Apps — Intent to App
+### User-Defined Apps
 
-Give AOHP a natural-language intent; it produces a complete app — PRD, design spec, frontend, and backend — ready to install on the device.
+Given a natural-language prompt, AOHP produces a fully-functional app, including the frontend UI and background logic supported by agents.
 
 <table align="center">
 <tr>
@@ -146,15 +90,15 @@ Give AOHP a natural-language intent; it produces a complete app — PRD, design 
 <td align="center"><a href="./demos/uda/python_learning_assistant_demo.mp4"><img src="./demos/uda/python_learning_assistant_demo.gif" alt="Python Learning Assistant demo" width="250"/></a></td>
 </tr>
 <tr>
-<td align="center"><sub>Aggregate fitness and sleep records from Huawei Health, and weight data from Mi Fitness, to generate a unified health management app. The app should be in English and support both portrait and landscape layouts.</sub></td>
-<td align="center"><sub>A gift selection app for romantic occasions like 520, helping users choose luxury items (Chanel/Gucci perfumes, Dior bags, Tiffany/VCA necklaces) for their girlfriends, featuring both portrait and landscape responsive layouts.</sub></td>
-<td align="center"><sub>My son recently started primary school, and I want him to learn programming (Python). Please help me generate a Python learning App, including knowledge point explanations, exercises, interactive practice, and learning progress. Please use English for the app generation, and it can include both landscape and portrait versions.</sub></td>
+<td align="center"><sub>Aggregate fitness, sleep, and weight records from different apps into a unified health management app.</sub></td>
+<td align="center"><sub>Generate a luxury gift selection app for my anniversity. Find gift information from all shopping apps.</sub></td>
+<td align="center"><sub>Generate a Python learning app for my child. Include courses and exercises. Track progress and report to me via messages every day.</sub></td>
 </tr>
 </table>
 
-### Agent Execution — OpenClaw on AOHP
+### Agent Execution
 
-Benchmark runs invoke **OpenClaw** through **AOHPAgentDriver**, exposing AOHP services as **skills**. Each recording captures the agent phase on a live AOHP device.
+AOHP provides personalized services by orchestrating APIs, CLIs, GUIs, memory, skills, etc. with AI agents.
 
 <table align="center">
 <tr>
@@ -173,21 +117,51 @@ Benchmark runs invoke **OpenClaw** through **AOHPAgentDriver**, exposing AOHP se
 
 ## Evaluation Highlights
 
-We evaluate AOHP with [OpenClaw](https://github.com/openclaw/openclaw) agents against stock Android on 10 representative tasks:
+We evaluate AOHP with [OpenClaw](https://github.com/openclaw/openclaw) against stock Android.
+The benchmark has 30 real-world mobile tasks.
+They cover GUI operation, non-GUI operation, event capture, multi-source retrieval, memory management, and hybrid workflows.
 
-| Metric               | Improvement |
-| -------------------- | ----------- |
-| Task Completion Rate | **↑46.7%** |
-| Tool Calls           | **↓65.6%**  |
-| Duration             | **↓72.2%**  |
-| Token Consumption    | **↓73.9%**  |
-| LLM Requests         | **↓68.5%**  |
+### Task Completion
+
+Each task is scored by objective checkpoints, so partially completed tasks still receive partial credit.
+
+| Setting | Completion Rate | Fully Solved | Partially Completed |
+| ------- | --------------- | ------------ | ------------------- |
+| OpenClaw on stock Android | 54.44% | 13 / 30 | 7 / 30 |
+| OpenClaw on AOHP | **75.56%** | **20 / 30** | 5 / 30 |
+| Gain | **+21.11%** | **+7 tasks** | - |
+
+
+### Execution Cost
+
+To compare cost fairly, we report the 11 tasks that both systems solve completely.
+
+| Setting | Tool Calls | Duration | Tokens | LLM Requests |
+| ------- | ---------- | -------- | ------ | ------------ |
+| OpenClaw on stock Android | 233 | 33.94 min | 7.10M | 273 |
+| OpenClaw on AOHP | **129** | **18.93 min** | **3.44M** | **143** |
+| Reduction | **44.64%** | **44.21%** | **51.55%** | **47.62%** |
+
+### Information-Flow Security
+
+AOHP is also evaluated with security-oriented test cases.
+The system enforces all five policy cases:
+
+| Security Check | Result |
+| -------------- | ------ |
+| Sensitive display uses vault references, not plaintext | Pass |
+| Ordinary non-sensitive actions proceed without extra approval | Pass |
+| Sensitive transfers and payment confirmation require user consent | Pass |
+| Unsupported access fails closed | Pass |
+| Sensitive events are redacted and preserve taint metadata | Pass |
 
 ---
 
 ## Getting Started
 
-AOHP is built on AOSP and developed through the unified **[aohp](https://github.com/aohp-os/aohp)** framework. This repository hosts project documentation; source trees live in the `aohp-os` GitHub organization and are pulled in via [local_manifests](https://github.com/aohp-os/local_manifests).
+AOHP is built on AOSP and developed through the unified **[aohp](https://github.com/aohp-os/aohp)** framework.
+This repository hosts project documentation.
+Source trees live in the `aohp-os` GitHub organization and are pulled in via [local_manifests](https://github.com/aohp-os/local_manifests).
 
 ### Quick start
 
@@ -214,12 +188,7 @@ Open the emulator at **https://localhost:8443/** (instance 1).
 
 ### Full development guide
 
-Setup, networking, multi-instance Cuttlefish, sandbox options, and contribution workflow are documented in:
-
-| Document | Description |
-|----------|-------------|
-| **[Development Guide](doc/DEVELOPMENT.md)** | Complete English tutorial |
-| **[开发指南](doc/DEVELOPMENT.zh-CN.md)** | 完整中文开发教程 |
+Setup, networking, multi-instance Cuttlefish, sandbox options, and contribution workflow are documented in **[Development Guide](doc/DEVELOPMENT.md)**.
 
 You can also clone this repo for project overview and updates:
 
@@ -239,9 +208,8 @@ AOHP is licensed under the [Apache License, Version 2.0](LICENSE).
 
 ```bibtex
 @techreport{aohp2026,
-  title={AOHP: An Agent-Native Open Fork of Android},
+  title={AOHP: An Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction},
   author={TBD},
-  institution={Institute for AI Industry Research (AIR), Tsinghua University},
   year={2026}
 }
 ```
