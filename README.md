@@ -1,7 +1,7 @@
 <h1 align="center">AOHP: Android Open Harness Project</h1>
 
 <p align="center">
-  <strong>Let the OS adapt to its user via agentic AI.</strong>
+  <strong>Let the OS proactively adapt to its user via agentic AI.</strong>
 </p>
 
 
