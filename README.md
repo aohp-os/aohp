@@ -159,8 +159,7 @@ The system enforces all five policy cases:
 
 ## Getting Started
 
-AOHP is built on AOSP and developed through the unified **[aohp](https://github.com/aohp-os/aohp)** framework.
-This repository hosts project documentation.
+AOHP is built on AOSP. This repository hosts project documentation and the unified development framework.
 Source trees live in the `aohp-os` GitHub organization and are pulled in via [local_manifests](https://github.com/aohp-os/local_manifests).
 
 ### Quick start
@@ -184,7 +183,7 @@ lunch aosp_cf_x86_64_phone_aohp-trunk_staging-userdebug
 sudo -E bash -c 'ulimit -n 65536; '"$ANDROID_HOST_OUT"'/bin/launch_cvd --report_anonymous_usage_stats=n' &
 ```
 
-Open the emulator at **https://localhost:8443/** (instance 1).
+Open the emulator at **https://localhost:8443/**.
 
 ### Full development guide
 
