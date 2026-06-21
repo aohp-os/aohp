@@ -1,0 +1,22 @@
+{
+  "name": "aohp-cli",
+  "version": "0.1.0",
+  "private": true,
+  "bin": {
+    "aohp": "dist/aohp.js"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/ws": "^8.5.13",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.0"
+  }
+}

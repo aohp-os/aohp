@@ -30,7 +30,7 @@
 
 - **操作系统**：推荐 Linux（Cuttlefish 官方支持环境）
 - **磁盘空间**：完整 AOSP 同步与编译需要数百 GB 可用空间
-- **网络**：从 Google 源同步需要可访问国际网络的代理；也可使用清华镜像（见下文）
+- **网络**：可访问 Google 源；也可使用清华镜像（见下文）
 - **权限**：启动 Cuttlefish 需要 `sudo`
 
 ---
@@ -91,11 +91,20 @@ repo sync -j4
 
 同步成功时终端输出类似：
 
-```text
+```bash
 $ repo sync -j4
 Syncing: 100% (1011/1011), done in 5h54m50.146s
 repo sync has finished successfully.
 ```
+
+### 下载 AOHP Agent Driver
+
+```bash
+cd aohp-app
+git clone git@github.com:aohp-os/AOHPAgentDriverApp.git
+```
+
+通过 Android Studio 编译 AOHP Agent Driver，并将安装包放置在：`AOSP/packages/apps/AOHPAgentDriver/AOHPAgentDriver.apk`。
 
 ---
 
@@ -103,7 +112,7 @@ repo sync has finished successfully.
 
 ### 编译代码
 
-若更新了 AOHPAgentDriver，需先在 Android Studio 中 build 出 APK，并替换到：
+若更新了 AOHP Agent Driver，需先在 Android Studio 中 build 出 APK，并替换到：
 
 `AOSP/packages/apps/AOHPAgentDriver/AOHPAgentDriver.apk`
 
@@ -235,7 +244,7 @@ bash scripts/check_dirty_repos.sh
 
 ### 首次提交新 project
 
-以修改 `build/make/core/build_id.mk`（将 `BUILDID` 从 `BP4A251205006` 改为 `AOHP10`）为例：
+以修改 `build/make/core/build_id.mk`为例：
 
 **1. 在 aohp-os 组织创建仓库**
 
@@ -261,7 +270,7 @@ git push -u aohp main
 
 ### 同步上游最新代码
 
-将某个 repo 的最新代码同步到本地工作区，使用 `repo sync` 针对该 project，或进入对应子目录执行 `git pull`（具体以团队约定为准）。
+将某个 repo 的最新代码同步到本地工作区，针对该 project 使用 `repo sync`，或进入对应子目录执行 `git pull`。
 
 ---
 

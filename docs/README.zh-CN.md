@@ -32,7 +32,7 @@ AOHP 让操作系统走向更深度的个性化。
 为了让这种体验**可行、高效且安全**，系统层与框架层的许多组件需要重新设计，但并非全部。因此我们推出 AOHP，一个操作系统级智能体承载框架（agent harness），用于实现个性化、高效且安全的交互。
 
 <p align="center">
-  <img src="../pic/comparison.png" alt="传统 Android 与 AOHP 架构对比" width="95%"/>
+  <img src="../images/comparison.png" alt="传统 Android 与 AOHP 架构对比" width="95%"/>
 </p>
 
 
@@ -50,7 +50,7 @@ AOHP 让操作系统走向更深度的个性化。
 AOHP 提供一组高效的智能体接口，并引入安全的信息流追踪机制，二者共同支撑个性化服务组合这一核心能力。系统架构如下：
 
 <p align="center">
-  <img src="../pic/overview.png" alt="AOHP 系统架构" width="95%"/>
+  <img src="../images/overview.png" alt="AOHP 系统架构" width="95%"/>
 </p>
 
 AOHP 与原生 Android 的对比：

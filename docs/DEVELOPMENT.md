@@ -12,6 +12,7 @@ This guide covers setting up the AOHP development environment, building and runn
 - [1. Initialization](#1-initialization)
   - [Clone the dev framework](#clone-the-dev-framework)
   - [Initialize AOSP sources](#initialize-aosp-sources)
+  - [Download AOHP Agent Driver](#download-aohp-agent-driver)
 - [2. Build & Run Cuttlefish](#2-build--run-cuttlefish)
   - [Build](#build)
   - [Launch the image](#launch-the-image)
@@ -30,7 +31,7 @@ This guide covers setting up the AOHP development environment, building and runn
 
 - **OS**: Linux recommended (Cuttlefish's supported host environment)
 - **Disk**: Hundreds of GB free for a full AOSP sync and build
-- **Network**: Proxy for Google sources, or use the Tsinghua mirror (below)
+- **Network**: Access to Google sources, or use the Tsinghua mirror (below)
 - **Privileges**: `sudo` required to launch Cuttlefish
 
 ---
@@ -86,11 +87,20 @@ repo sync -j4
 
 Successful sync looks like:
 
-```text
+```bash
 $ repo sync -j4
 Syncing: 100% (1011/1011), done in 5h54m50.146s
 repo sync has finished successfully.
 ```
+
+### Download AOHP Agent Driver
+
+```bash
+cd aohp-app
+git clone git@github.com:aohp-os/AOHPAgentDriverApp.git
+```
+
+Build AOHP Agent Driver in Android Studio and place the APK at: `AOSP/packages/apps/AOHPAgentDriver/AOHPAgentDriver.apk`.
 
 ---
 
@@ -98,7 +108,7 @@ repo sync has finished successfully.
 
 ### Build
 
-If you updated AOHPAgentDriver, build the APK in Android Studio and replace:
+If you updated AOHP Agent Driver, build the APK in Android Studio and replace:
 
 `AOSP/packages/apps/AOHPAgentDriver/AOHPAgentDriver.apk`
 
@@ -225,7 +235,7 @@ If the project already exists under `aohp-os` and your local tree tracks it, ope
 
 ### First-time submission for a new project
 
-Example: changing `BUILDID` in `build/make/core/build_id.mk` from `BP4A251205006` to `AOHP10`.
+Example: modifying `build/make/core/build_id.mk`.
 
 **1. Create the repo under aohp-os**
 
@@ -251,7 +261,7 @@ Add the matching `<project>` / `<remove-project>` entries in [local_manifests](h
 
 ### Sync upstream changes
 
-Use `repo sync` for the specific project, or `git pull` inside the sub-repo, per team convention.
+To sync the latest upstream code for a project into your local tree, use `repo sync` for that project, or run `git pull` inside the corresponding subdirectory.
 
 ---
 

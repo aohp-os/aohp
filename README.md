@@ -13,9 +13,9 @@
 </p>
 
 <p align="center">
-  <a href="doc/README.zh-CN.md">中文文档</a> ·
-  <a href="doc/DEVELOPMENT.md">Development Guide</a> ·
-  <a href="doc/DEVELOPMENT.zh-CN.md">开发指南</a>
+  <a href="docs/README.zh-CN.md">中文文档</a> ·
+  <a href="docs/DEVELOPMENT.md">Development Guide</a> ·
+  <a href="docs/DEVELOPMENT.zh-CN.md">开发指南</a>
 </p>
 
 **🎬 [See Demos](#real-world-demos)**: Watch AOHP generate personalized user-defined apps and complete cross-app tasks.
@@ -33,7 +33,7 @@ The agents use system APIs, CLIs and GUI-based apps in the background to compose
 To make such experience **feasible, efficient and secure**. Many components in the system and framework layers have to be redesigned, but not all. That's why we introduce AOHP, an OS-level agent harness to enable personalized, efficient and secure interaction.
 
 <p align="center">
-  <img src="./pic/comparison.png" alt="Traditional Android vs AOHP architecture" width="95%"/>
+  <img src="./images/comparison.png" alt="Traditional Android vs AOHP architecture" width="95%"/>
 </p>
 
 
@@ -51,7 +51,7 @@ To make such experience **feasible, efficient and secure**. Many components in t
 AOHP features a set of efficient agent interfaces and a secure information flow tracking mechanism, which together foster the core capabilities to enable personalized service composition. The system architecture:
 
 <p align="center">
-  <img src="./pic/overview.png" alt="AOHP System Architecture" width="95%"/>
+  <img src="./images/overview.png" alt="AOHP System Architecture" width="95%"/>
 </p>
 
 A comparison between AOHP and stock Android:
@@ -187,7 +187,7 @@ Open the emulator at **https://localhost:8443/**.
 
 ### Full development guide
 
-Setup, networking, multi-instance Cuttlefish, sandbox options, and contribution workflow are documented in **[Development Guide](doc/DEVELOPMENT.md)**.
+Setup, networking, multi-instance Cuttlefish, sandbox options, and contribution workflow are documented in **[Development Guide](docs/DEVELOPMENT.md)**.
 
 You can also clone this repo for project overview and updates:
 
