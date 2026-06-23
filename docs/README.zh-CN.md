@@ -206,10 +206,14 @@ AOHP 采用 [Apache License, Version 2.0](../LICENSE) 发布。
 ## 引用
 
 ```bibtex
-@techreport{aohp2026,
-  title={AOHP: An Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction},
-  author={TBD},
-  year={2026}
+@misc{zhao2026aohp,
+      title={AOHP: An Open-Source OS-Level Agent Harness for Personalized, Efficient and Secure Interaction}, 
+      author={Shanhui Zhao and Jiacheng Liu and Guohong Liu and Jichao Yan and Jialei Ye and Yuhao Yang and Hao Wen and Shizuo Tian and Yizhen Yuan and Yuxuan Chen and Yunxin Liu and Ju Ren and Ya-Qin Zhang and Chao Huang and Yao Guo and Yuanchun Li},
+      year={2026},
+      eprint={2606.23449},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2606.23449}, 
 }
 ```
 
