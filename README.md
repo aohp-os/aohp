@@ -8,7 +8,7 @@
 <p align="center">
   <a href="#real-world-demos"><img src="https://img.shields.io/badge/Demos-Live_Recordings-green?style=for-the-badge" alt="Demos"></a>
   <a href="#evaluation-highlights"><img src="https://img.shields.io/badge/Benchmark-75.56%25_Completion-brightgreen?style=for-the-badge" alt="Benchmark"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Paper-Technical%20Report-orange?style=for-the-badge" alt="Paper"></a>
+  <a href="https://arxiv.org/abs/2606.23449"><img src="https://img.shields.io/badge/Paper-Technical%20Report-orange?style=for-the-badge" alt="Paper"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-yellow?style=for-the-badge" alt="License"></a>
 </p>
 
