@@ -129,7 +129,7 @@ Each task is scored by objective checkpoints, so partially completed tasks still
 | ------- | --------------- | ------------ | ------------------- |
 | OpenClaw on stock Android | 54.44% | 13 / 30 | 7 / 30 |
 | OpenClaw on AOHP | **75.56%** | **20 / 30** | 5 / 30 |
-| Gain | **+21.11%** | **+7 tasks** | - |
+| Gain | **+21.12%** | **+7 tasks** | - |
 
 
 ### Execution Cost
