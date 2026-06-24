@@ -22,7 +22,7 @@
   <a href="DEVELOPMENT.md">Development Guide</a> ·
   <a href="DEVELOPMENT.zh-CN.md">开发指南</a>
 </p>
-**🎬 [观看演示视频](#real-world-demos)**：了解 AOHP 如何生成个性化的用户定义应用，并完成跨应用任务。
+<strong>🎬 <a href="#real-world-demos">观看演示视频</a></strong>：了解 AOHP 如何生成个性化的用户定义应用，并完成跨应用任务。
 
 ---
 

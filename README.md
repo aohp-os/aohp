@@ -22,7 +22,7 @@
   <a href="docs/DEVELOPMENT.md">Development Guide</a> ·
   <a href="docs/DEVELOPMENT.zh-CN.md">开发指南</a>
 </p>
-**🎬 [See Demos](#real-world-demos)**: Watch AOHP generate personalized user-defined apps and complete cross-app tasks.
+<strong>🎬 <a href="#real-world-demos">See Demos</a></strong>: Watch AOHP generate personalized user-defined apps and complete cross-app tasks.
 
 ---
 
