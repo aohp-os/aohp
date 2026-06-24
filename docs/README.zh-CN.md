@@ -8,8 +8,13 @@
 <p align="center">
   <a href="#real-world-demos"><img src="https://img.shields.io/badge/Demos-Live_Recordings-green?style=for-the-badge" alt="Demos"></a>
   <a href="#evaluation-highlights"><img src="https://img.shields.io/badge/Benchmark-75.56%25_Completion-brightgreen?style=for-the-badge" alt="Benchmark"></a>
-  <a href="https://arxiv.org/abs/2606.23449"><img src="https://img.shields.io/badge/Paper-Technical%20Report-orange?style=for-the-badge" alt="Paper"></a>
+  <a href="https://arxiv.org/abs/2606.23449"><img src="https://img.shields.io/badge/TECH_REPORT-ARXIV%3A2606.23449-C00000?labelColor=4D4D4D&amp;style=for-the-badge" alt="Paper"></a>
+  <a href="https://x.com/yuanchun_li/status/2069293026577629298"><img src="https://img.shields.io/badge/X 公告-555555?style=for-the-badge&logo=x&logoColor=white&labelColor=000000" alt="X"></a>
   <a href="../LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-yellow?style=for-the-badge" alt="License"></a>
+</p>
+<p align="center">
+  <a href="https://github.com/MobileLLM/lab-contact"><img src="https://img.shields.io/badge/WeChat-交流群-C5EAB4?style=flat&logo=wechat&logoColor=white" alt="WeChat"></a>
+  <a href="https://discord.gg/3bhPrAarW"><img src="https://img.shields.io/badge/Discord-交流群-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord"></a>
 </p>
 
 <p align="center">
