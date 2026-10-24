@@ -6947,6 +6947,10 @@ async function invokeSetNodeProgress(url, opts, pretty) {
     process.exit(2);
   }
   const result = res.result;
+  if (actResultFailed(result)) {
+    console.error(JSON.stringify(result, null, pretty ? 2 : void 0));
+    process.exit(2);
+  }
   if (value !== void 0 && result !== null && typeof result === "object") {
     console.log(JSON.stringify({
       ...result,

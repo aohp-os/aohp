@@ -243,6 +243,10 @@ async function invokeSetNodeProgress(
     process.exit(2);
   }
   const result = res.result;
+  if (actResultFailed(result)) {
+    console.error(JSON.stringify(result, null, pretty ? 2 : undefined));
+    process.exit(2);
+  }
   if (value !== undefined && result !== null && typeof result === "object") {
     console.log(JSON.stringify({
       ...(result as Record<string, unknown>),
